@@ -1,4 +1,6 @@
-package ru.ivamly.edu.dto;
+package ru.ivamly.edu.dto.rs;
+
+import ru.ivamly.edu.dto.PassportDto;
 
 import java.util.UUID;
 
