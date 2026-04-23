@@ -1,5 +1,6 @@
 package ru.ivamly.edu.app.controller;
 
+import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -7,8 +8,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import ru.ivamly.edu.app.mapper.CitizenMapper;
 import ru.ivamly.edu.app.service.CitizenService;
-import ru.ivamly.edu.dto.CreateCitizenRq;
-import ru.ivamly.edu.dto.CreateCitizenRs;
+import ru.ivamly.edu.dto.rq.CreateCitizenRq;
+import ru.ivamly.edu.dto.rs.CreateCitizenRs;
 
 @RestController
 @RequestMapping("/citizens")
@@ -19,7 +20,7 @@ public class CitizenController {
     private final CitizenMapper citizenMapper;
 
     @PostMapping(version = "1")
-    public CreateCitizenRs create(@RequestBody CreateCitizenRq request) {
+    public CreateCitizenRs create(@RequestBody @Valid CreateCitizenRq request) {
         return citizenMapper.map(
                 citizenService.create(
                         citizenMapper.map(request)

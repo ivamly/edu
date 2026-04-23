@@ -4,8 +4,8 @@ import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 import ru.ivamly.edu.app.config.MapstructConfig;
 import ru.ivamly.edu.app.entity.Citizen;
-import ru.ivamly.edu.dto.CreateCitizenRq;
-import ru.ivamly.edu.dto.CreateCitizenRs;
+import ru.ivamly.edu.dto.rq.CreateCitizenRq;
+import ru.ivamly.edu.dto.rs.CreateCitizenRs;
 
 @Mapper(config = MapstructConfig.class)
 public interface CitizenMapper {
