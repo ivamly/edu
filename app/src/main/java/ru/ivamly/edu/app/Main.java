@@ -1,7 +1,11 @@
 package ru.ivamly.edu.app;
 
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
 public class Main {
     static void main() {
-        System.out.println("Hello from app!");
+        SpringApplication.run(Main.class);
     }
 }
